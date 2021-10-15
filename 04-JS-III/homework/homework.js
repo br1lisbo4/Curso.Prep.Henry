@@ -58,8 +58,7 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-  palabras.join(" ");
-  return palabras
+  return palabras.join(" ")
 }
 
 
@@ -79,9 +78,13 @@ function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código: 
-  var arr = []
-  for (i = 0 ; i < numeros.length ; i++){
-    arr[i] = (numeros[i] + arr[i])
+  // var arr = []
+  //for (i = 0 ; i < numeros.length ; i++){
+  //  arr[i] = (numeros[i] + arr[i])
+  //} return arr
+  var arr = 0
+  for (i = 0; i < numeros.length; i++){
+    arr = arr + numeros[i]
   } return arr
 }
 
@@ -90,6 +93,12 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
+  var arr = []
+  for (i = 0 ; i < resultadosTest ; i++){
+    arr[i] = (resultadosTest[i] + arr[i])
+  } 
+  var arr2 = (arr / resultadosTest.length)
+  return arr2
 }
 
 
@@ -97,6 +106,13 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+  var crr = 0
+  for (i = 0; i < numeros.length; i++){
+    if (numeros[i] > crr){
+      crr = numeros[i]
+    }
+  } 
+  return crr
 }
 
 
@@ -104,13 +120,28 @@ function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
+  if (arguments.length === 1){
+    return arguments[0]
+  }
+  if (arguments.length === 0){
+    return 0
+  }
+  var crr = 1
+  for (i = 0; i < arguments.length; i++){
+    crr = (crr * arguments[i])
+  } return crr
 }
 
 
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
-
+  var crr = 0
+  for (i = 0; i < arreglo.length; i ++){
+    if (arreglo[i] > 18){
+      crr = crr + 1
+    } return crr
+  }
 }
 
 
@@ -119,6 +150,11 @@ function diaDeLaSemana(numeroDeDia) {
   //Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
   //Escribe tu código aquí   
+  if (numeroDeDia === 1 || numeroDeDia === 6){
+    return "Es fin de semana"
+  } else {
+    return "Es dia laboral"
+  }
   
 } 
 
