@@ -93,12 +93,12 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
-  var arr = []
-  for (i = 0 ; i < resultadosTest ; i++){
-    arr[i] = (resultadosTest[i] + arr[i])
-  } 
-  var arr2 = (arr / resultadosTest.length)
-  return arr2
+  var suma = 0
+  for (i = 0 ; i < resultadosTest.length ; i ++){
+    suma = resultadosTest[i] + suma;
+  }
+  var promedio = suma / resultadosTest.length;
+  return promedio
 }
 
 
@@ -163,7 +163,12 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
-  
+  var tostr = n.toString()
+  var splt = tostr.split(" ")
+  if ( splt[0] === 9){
+    return true
+  } 
+  return false
 }
 
 
@@ -171,7 +176,13 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
-  
+  for (i = 0; i < arreglo.length; i++){
+    if (arreglo[i] === arreglo[i+1]){
+      return true
+    } else {
+      return false
+    }
+  }
 } 
 
 
@@ -180,6 +191,17 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
+  var eneromarzoOnoviembre = []
+  for (i = 0; i < array.length; i++){
+    if (array[i] === "Enero" || array[i] === "Marzo" || array[i] === "Noviembre"){
+      eneromarzoOnoviembre.push(array[i])
+    }
+  }
+  if (eneromarzoOnoviembre < 3){
+    return "No se encontraron los meses pedidos"
+  } else {
+    return eneromarzoOnoviembre
+  }
 }
 
 
