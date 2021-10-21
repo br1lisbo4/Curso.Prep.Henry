@@ -227,10 +227,21 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
-  var nWarray = [];
-  var contador = 0;
- }
-
+  var nwarray = [];
+  var crr = numero;
+  for(i=0;i<10;i++){
+    crr=crr+2;
+    if(crr===i)break;
+    else{
+      nwarray.push(crr)
+    }
+  }
+  if(i<10){
+    return "Se interrumpió la ejecución";
+  }else{
+    return nwarray;
+  }
+}
 
 function continueStatement(numero) {
   //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
@@ -239,6 +250,14 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
+  var nwarray = [];
+  var crr = numero;
+  for (i = 0; i < 10; i++){
+    if ( i === 5 ) continue;
+    crr = crr + 2;
+    nwarray.push(crr)
+  }
+    return nwarray;
 }
 
 
