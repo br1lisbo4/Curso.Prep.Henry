@@ -111,6 +111,8 @@ function agregarAmigo(usuario, nuevoAmigo) {
   // Agrega "nuevoAmigo" al final de ese array
   // Devuelve el objeto "usuario"
   // // Tu código:
+
+  omg
 }
 
 function pasarUsuarioAPremium(usuarios) {
