@@ -128,10 +128,9 @@ function pasarUsuarioAPremium(usuarios) {
 
         //usuarios = [usuario{esPremium:}}];
   for (i = 0; i < usuarios.length; i++) {
-    usuario[i].esPremium = true
+    usuarios[i].esPremium = true
   } 
   return usuarios;
-      
 }
 
 function sumarLikesDeUsuario(usuario) {
@@ -141,6 +140,11 @@ function sumarLikesDeUsuario(usuario) {
   // Suma todos los likes de todos los objetos "post"
   // Devuelve la suma
   // Tu código:
+  var contador = 0;
+  for ( i = 0 ; i < usuario.posts.length ; i++){
+    contador = contador + usuario.posts[i].likes;
+  }
+  return contador;
 }
 
 function agregarMetodoCalculoDescuento(producto) {
